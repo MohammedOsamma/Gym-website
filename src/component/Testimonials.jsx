@@ -12,12 +12,18 @@ const Testimonials = () => {
   const [index, setIndex] = useState(0);
   const { name, quote, job, avatar } = testimonials[index];
 
-  //   const testimonialsLeftButtonHandle = () => {
-  //     setIndex((prev) => prev + 1);
-  //   };
-  //   const testimonialsRightButtonHandle = () => {
-  //     setIndex((prev) => prev - 1);
-  //   };
+  const prevTestimonialsHandler = () => {
+    setIndex((prev) => prev - 1);
+    if (index <= 0) {
+      setIndex(testimonials.length - 1);
+    }
+  };
+  const nextTestimonialsHandler = () => {
+    setIndex((prev) => prev + 1);
+    if (index >= testimonials.length - 1) {
+      setIndex(0);
+    }
+  };
   return (
     <section className="testimonials">
       <div className="container testimonials__container">
@@ -30,19 +36,19 @@ const Testimonials = () => {
           <div className="testimonial__avatar">
             <img src={avatar} alt="AvatarImage" />
           </div>
-          <p className="testimonials__quote">{`"${quote}"`}</p>
+          <p className="testimonial__quote">{`"${quote}"`}</p>
           <h5>{name}</h5>
-          <small className="testimonials__title">{job}</small>
+          <small className="testimonial__title">{job}</small>
         </Card>
         <div className="testimonials__btn-container">
           <button
             className="testimonials__btn"
-            // onClick={testimonialsLeftButtonHandle}
+            onClick={prevTestimonialsHandler}
           >
             <IoIosArrowDropleftCircle />
           </button>
           <button
-            // onClick={testimonialsRightButtonHandle}
+            onClick={nextTestimonialsHandler}
             className="testimonials__btn"
           >
             <IoIosArrowDroprightCircle />

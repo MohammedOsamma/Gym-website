@@ -14,7 +14,7 @@
   --primary-hue: 210;
   --gray-hue: 240;
   --color-primary: hsl(var(--primary-hue), 100%, 50%);
-  --color-priamry-cariant: hsl(var(--primary-hue), 100%, 65%);
+  --color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
   --color-secondary: #ffb116;
   --color-gray-100: hsl(var(--gray-hue), 47%, 94%);
   --color-gray-200: hsl(var(--gray-hue), 26%, 75%);
@@ -146,4 +146,25 @@ section {
   margin-top: 1rem;
   display: block;
   font-weight: 300;
+}
+
+/*  MEDIA QUERIES (medium screens)  */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/*  MEDIA QUERIES (small screens)  */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
 }
