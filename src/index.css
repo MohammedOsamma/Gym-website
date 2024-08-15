@@ -33,7 +33,7 @@ body {
   color: var(--color-gray-200);
   line-height: 1.7;
   overflow-x: hidden;
-  background: var(--color-gray-600);
+  background: var(--color-gray-600) url(./images/bg_texture.png);
 }
 .container {
   width: var(--container-width-lg);

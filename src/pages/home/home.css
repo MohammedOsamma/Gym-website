@@ -41,14 +41,11 @@
   border-radius: 50%;
   position: absolute;
   transition: var(--transition);
+  filter: blur(15px);
 }
 
 .main__header-image {
   position: relative;
-}
-
-.main__header-right:hover .main__header-circle {
-  filter: blur(15px);
 }
 
 /* ##################################### Programs ##################################### */
